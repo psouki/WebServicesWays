@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost:59529/JokeService.asmx?wsdl" docRef="http://localhost:59529/JokeService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost:59529/JokeService.asmx" xmlns:q1="http://jokes.org/" binding="q1:Joke_x005F_x0020_Remember_x005F_x0020_ServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost:59529/JokeService.asmx" xmlns:q2="http://jokes.org/" binding="q2:Joke_x005F_x0020_Remember_x005F_x0020_ServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "Title": "Bar 1",
+    "Question": "An amnesiac walks into a bar",
+    "Answer": "He goes up to a beautiful blond and says: So, do I come here often?",
+    "Grade": 2
+  },
+  {
+    "Id": 2,
+    "Title": "Bar 2",
+    "Question": "A neutron walks into a bar.",
+    "Answer": "How much for a beer? the neutron asks. For you no charge",
+    "Grade": 3
+  }
+]

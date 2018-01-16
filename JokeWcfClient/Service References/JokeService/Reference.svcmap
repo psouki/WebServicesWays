@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c818948-d602-4e01-9b1f-270cecaf05a5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62916/JokeService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JokeService.xsd" MetadataType="Schema" ID="7dfce846-84e9-4255-a25a-58577e61951a" SourceId="1" SourceUrl="http://localhost:62916/JokeService.svc?xsd=xsd1" />
+    <MetadataFile FileName="JokeService1.xsd" MetadataType="Schema" ID="a24edeb6-ca00-4470-9e27-2b4749d3c4a2" SourceId="1" SourceUrl="http://localhost:62916/JokeService.svc?xsd=xsd2" />
+    <MetadataFile FileName="JokeService.disco" MetadataType="Disco" ID="2609b505-9dca-408a-aca8-294fd8bb84da" SourceId="1" SourceUrl="http://localhost:62916/JokeService.svc?disco" />
+    <MetadataFile FileName="JokeService.wsdl" MetadataType="Wsdl" ID="d704a5fa-4426-4456-adca-93e62370b6c0" SourceId="1" SourceUrl="http://localhost:62916/JokeService.svc?wsdl" />
+    <MetadataFile FileName="JokeService2.xsd" MetadataType="Schema" ID="89e1d13d-d455-4732-8d8c-3fde73c7b705" SourceId="1" SourceUrl="http://localhost:62916/JokeService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

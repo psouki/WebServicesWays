@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JokeService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62916/JokeService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62916/JokeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62916/JokeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JokeWcfData" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJokeService_GetJokes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJokes" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_GetJokes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJokesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_GetJokeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJokeById" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_GetJokeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJokeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_UpdateJoke_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJoke" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_UpdateJoke_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJokeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_AddJoke_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJoke" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_AddJoke_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJokeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_DeleteJoke_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJoke" />
+  </wsdl:message>
+  <wsdl:message name="IJokeService_DeleteJoke_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJokeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJokeService">
+    <wsdl:operation name="GetJokes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJokeService/GetJokes" message="tns:IJokeService_GetJokes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJokeService/GetJokesResponse" message="tns:IJokeService_GetJokes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJokeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJokeService/GetJokeById" message="tns:IJokeService_GetJokeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJokeService/GetJokeByIdResponse" message="tns:IJokeService_GetJokeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJoke">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJokeService/UpdateJoke" message="tns:IJokeService_UpdateJoke_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJokeService/UpdateJokeResponse" message="tns:IJokeService_UpdateJoke_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJoke">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJokeService/AddJoke" message="tns:IJokeService_AddJoke_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJokeService/AddJokeResponse" message="tns:IJokeService_AddJoke_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJoke">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJokeService/DeleteJoke" message="tns:IJokeService_DeleteJoke_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJokeService/DeleteJokeResponse" message="tns:IJokeService_DeleteJoke_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IJokeService" type="tns:IJokeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetJokes">
+      <soap:operation soapAction="http://tempuri.org/IJokeService/GetJokes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJokeById">
+      <soap:operation soapAction="http://tempuri.org/IJokeService/GetJokeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJoke">
+      <soap:operation soapAction="http://tempuri.org/IJokeService/UpdateJoke" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJoke">
+      <soap:operation soapAction="http://tempuri.org/IJokeService/AddJoke" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJoke">
+      <soap:operation soapAction="http://tempuri.org/IJokeService/DeleteJoke" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JokeService">
+    <wsdl:port name="BasicHttpBinding_IJokeService" binding="tns:BasicHttpBinding_IJokeService">
+      <soap:address location="http://localhost:62916/JokeService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
